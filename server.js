@@ -19,7 +19,7 @@ const ENV = 'DEV';
 const app = express();
 app.get('/', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello from from Primus Learning, this was awesome for version four(444)';
+  const msg = 'Hello from from Primus Learning, this was awesome for version five(555)';
   res.send(getPage(msg));
 });
 
