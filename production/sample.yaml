@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: booking-jacahi
+  name: booking-jacahi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking-jacahi
+  template:
+    metadata:
+      labels:
+        app: booking-jacahi
+    spec:
+      containers:
+      - image: 300677447060.dkr.ecr.ap-southeast-1.amazonaws.com/jachai-order:8a2df77
+        name: booking-jacahi
+        env:
+        - name: MONGODB_URI
+          #value: mongodb://root:0&l2izDGl)V5fL0L@10.200.156.122:27017/?authSource=admin&directConnection=true
+          value: mongodb://admin:P6rbNo5ND9u7uhQcLxn@13.213.225.127:27017/jachai-booking?authSource=admin
+          #value: mongodb://root:0&l2izDGl)V5fL0L@10.200.156.122:27017/?authSource=admin&directConnection=true
+        - name: JWT_KEY
+          value: Imt&73WSER$#CRFS47trwe%$&4BIgRYO$nyH&NI6IRTCH5NR&IRKEGNCE*cTWE
+        imagePullPolicy: Always
+       # envFrom:
+        #- configMapRef:
+           # name: jachai-order-cofigmap
+        #envFrom:
+        #- secretRef:
+         #   name: mongosecrest
