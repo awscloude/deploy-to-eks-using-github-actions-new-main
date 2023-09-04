@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: booking-jacahi
-  name: booking-jacahi
+  name: booking-jacahi--------------
 spec:
   replicas: 1
   selector:
