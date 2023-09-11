@@ -1,3 +1,3 @@
-./production/sample.yaml
+/production/sample.yaml
 /staging/
-/deploy-to-eks-using-github-actions-new-main/tree/staging/github-action-ci.yaml
+/deploy-to-eks-using-github-actions-new-main/.github/workflows/github-action-ci.yaml
