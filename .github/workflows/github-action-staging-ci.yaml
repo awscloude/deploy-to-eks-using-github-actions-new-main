@@ -2,7 +2,7 @@ name: Node js app deploy to EKS
 on:
   push:
     branches:
-    - main
+    - staging
 
 jobs:
   deploy:
